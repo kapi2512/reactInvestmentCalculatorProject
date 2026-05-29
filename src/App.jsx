@@ -1,6 +1,7 @@
 import {useState} from "react";
 
 import UserInput from "./components/UserInput";
+import Result from "./components/Result";
 
 function App() {
   const [ investmentData, setInvestmentData] = useState({
@@ -19,11 +20,14 @@ function App() {
     }
 
   return (
-    <>
+    <main>
     <UserInput data={investmentData} handleInputChange={handleInputChange} />
 
+      <Result investmentData={investmentData}/>
+
     
-    </>
+    
+    </main>
   )
 }
 
